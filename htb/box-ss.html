@@ -18,7 +18,7 @@
     		<div class="blurb">
 			<p>Writeup on $w4g$h0p, damn there's not gonna be any format on this page, so it's gonna look ugly as hell :(</p>
 			<p>First thing to do is to gather some information. A quick <b>ifconfig</b> shows that our IP address is 10.10.16.24. This will be useful later.</p>
-			<img src="/htb/pics/ss/ss1.png" width="200" height="80">
+			<img src="/htb/pics/ss/ss1.png">
 			<p>A <b>nmap</b> shows that there are 2 services running on this ip address, we will skip the attemp on <b>ssh</b> and focus on apache being host on port 80. <b>Searchsploit</b> did not return any hit on that apache version.</p>
 			<p>Accessing this IP address on a browser, I see that Magento is being used. Looking for the version of Magento being used might be useful. I attempted some Magento detecting service online, but none of them work, so I used <b>gobuster</b> to enumerate the directory list. I also noticed that this IP address timed out with error code 503 a lot. <b>gobuster</b> did return some promising directory to look at</p>
 			<p>Found the Magento version in /var folder, which is 1.9.0. A quick <b>Searchsploit</b> on Magento 1.9 returned a hit. It seems to be an exploit to generate an admin user on Magento admin panel</p>
