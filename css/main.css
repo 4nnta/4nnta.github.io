@@ -1,4 +1,7 @@
 body {
+    background-color: #000;
+    text-align: justify;
+    color: green;
     margin: 60px auto;
     width: 70%;
 }
@@ -24,7 +27,7 @@ h1 {
     font-family:'Courier New';
 }
 p {
-    font-size: 1.5em;
+    font-size: 1em;
     font-family:'Courier New';
     line-height: 1.4em;
     color: #333;
