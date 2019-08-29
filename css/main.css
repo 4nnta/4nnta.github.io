@@ -4,9 +4,9 @@ body {
     color: green;
     margin: 60px auto;
     width: 70%;
+    font-family: 'Lucida Console', 'Lucida San Typewriter', 'monaco', 'Bitstream vera Sans Mono', 'monospace';
 }
 nav ul, footer ul {
-    font-family:'Courier New';
     padding: 0px;
     list-style: none;
     font-weight: bold;
@@ -24,13 +24,10 @@ a:hover {
 }
 h1 {
     font-size: 3em;
-    font-family:'Courier New';
 }
 p {
     font-size: 1em;
-    font-family:'Courier New';
     line-height: 1.4em;
-    color: #333;
 }
 footer {
     border-top: 1px solid #d5d5d5;
