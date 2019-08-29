@@ -16,7 +16,7 @@
 		</nav>
 		<div class="container">
     		<div class="blurb">
-			<p>SwagShop is an ease Linux box on HTB.</p>
+			<p>SwagShop is an easy Linux box on HTB.</p>
 			<p>First thing to do is to gather some information. A quick <b>ifconfig</b> shows that our IP address is 10.10.16.24. This will be useful later.</p>
 			<img src="/htb/pics/ss/ss1.png">
 			<p>A <b>nmap</b> shows that there are 2 services running on this ip address, we will skip the attemp on <b>ssh</b> and focus on apache being host on port 80. <b>Searchsploit</b> did not return any hit on that apache version.</p>
@@ -28,7 +28,7 @@
 			<img src="/htb/pics/ss/ss5.png">
 			<p>Downloaded the exploit, modify it a bit on the url section, and run, I managed to generate an admin user on Magento admin panel. I also get access to package management on Magento using this credential.</p>
 			<img src="/htb/pics/ss/ss6.png">
-			<p>I found a backdoor package by Lavalamp on github, and modify the IndexController.php with a php reverse shell spawn written by pentestmonkey. I managed to upload this backdoor package to the server.</p>
+			<p>I found a backdoor package by Lavalamp on github, and modify the IndexController.php with a php reverse shell with my IP address. I managed to upload this backdoor package to the server.</p>
 			<p>Setting up a listening port using <b>netcat</b>, I triggered the backdoor through the url. Successfully spawned a shell on 10.10.10.140 under www-data privilege</p>
 			<p>A quick <b>cat</b> check on /home/haris/user.txt shows that I have access to this user. Got the user flag!</p>
 			<p><b>sudo -l</b> shows that www-data user have permission to run /usr/bin/vi under sudo without password for any files in /var/www/html/. I created a bash script in /var/www/html/ that cat /root/root.txt and run /usr/bin/vi using sudo permission. Got the root flag!</p>
